@@ -22,17 +22,17 @@ console.log(id === anotherId);
 
 // Array, Objects, Functions
 
-const heros = ["shaktiman", "naagraj", "doga"];
-let myObj = {
-    name: "sonali",
-    age: 22,
-}
+// const heros = ["shaktiman", "naagraj", "doga"];
+// let myObj = {
+//     name: "sonali",
+//     age: 22,
+// }
 
-const myFunction = function(){
-    console.log("Hello world");
-}
+// const myFunction = function(){
+//     console.log("Hello world");
+// }
 
-console.log(typeof anotherId);
+// console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 // Return type of variables in JavaScript
@@ -49,3 +49,18 @@ console.log(typeof anotherId);
 //        Arrays  =>  object
 //        Function  =>  function
 //        Object  =>  object
+/*******************************************************/
+let fname="sonali"
+let anotherName= fname
+anotherName="palash"
+console.log(anotherName);
+console.log(fname);
+
+let userOne={
+    email : "sonaliparihar@google.com",
+    id : 123
+}
+let userTwo = userOne
+userTwo.email= "palashmishra@google.com"
+console.log(userOne)
+console.log(userTwo)
