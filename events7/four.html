@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Javascript fun with sonali</h1>
+<button id="start">start</button>
+<button id="stop">stop</button>
+</body>
+<script>
+let intervalid;
+let toggle= true;
+ document.querySelector('#start').addEventListener('click',()=>{
+    intervalid= setInterval(()=>{
+if(toggle){
+    document.querySelector('h1').innerHTML='hello sonali palash mishra'
+}
+    else{
+        document.querySelector('h1').innerHTML='Javascript fun with sonali' 
+    }
+ toggle = !toggle;
+
+},1000)
+},false)
+document.querySelector('#stop').addEventListener('click',()=>{
+  clearInterval(intervalid)
+},false)
+
+</script>
+</html>

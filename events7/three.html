@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript fun with sonali</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+let intervalid;
+document.querySelector("#start").addEventListener('click',function(){
+   
+    intervalid = setInterval(() => {
+        document.querySelector('h1').innerHTML=`hello ${Date.now()}` 
+    },1000 );
+    
+},false);
+document.querySelector("#stop").addEventListener('click',function(){
+   
+ clearInterval(intervalid)
+   
+},false);
+</script>
+</html>
