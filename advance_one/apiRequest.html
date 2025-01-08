@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .card {
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background-color: #fff;
+      overflow: hidden;
+    }
+    </style>
+</head>
+<body >
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+<div class="card">
+    <img src=''id=img alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4 class="name"><b>username</b></h4>
+      </div>
+  </div>
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/sonali2899'
+    const xhr=  new XMLHttpRequest()
+    xhr.open('get',requestUrl)
+   xhr.onreadystatechange=function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState === 4){
+        console.log(this.responseText)
+        const data= JSON.parse(this.responseText)
+        console.log(data.followers);
+        document.querySelector('#img').src= data.avatar_url; 
+        document.querySelector('.name').textContent=  data.name
+    }
+   
+   }
+  xhr.send()
+
+</script>
+</html>
