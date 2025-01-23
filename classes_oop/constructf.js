@@ -13,3 +13,5 @@ const sonali = new person('sonali',25)
 const palash = new person('palash',26)
 sonali.greet()
 palash.greet()
+console.log(sonali.constructor);
+console.log(palash)
